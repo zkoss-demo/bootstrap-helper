@@ -8,7 +8,11 @@ Add the following to your `WEB-INF/zk.xml` to control which Bootstrap CSS files 
 
 ## Default (Grid + Utilities)
 
-By default, the helper includes both `bootstrap-grid.min.css` and `bootstrap-utilities.min.css`. You don't need to specify anything in `zk.xml` for this default behavior.
+By default, the helper includes: 
+* `bootstrap-grid.min.css` 
+* `bootstrap-utilities.min.css`
+
+You don't need to specify anything in `zk.xml` for this default behavior.
 
 ## Custom CSS Selection
 
@@ -57,9 +61,10 @@ To disable all automatic Bootstrap CSS inclusion:
 </library-property>
 ```
 
-*This will only include `bootstrap-grid.min.css`.*
+This will only include `bootstrap-grid.min.css`.
 
-// ...existing content...
+## Custom Values
+Check the following css file names to know the allowed custom values, it's the word between `bootstrap-` and `min.css`. (e.g. `grid` for `bootstrap-grid.min.css`).
 
 # Bootstrap CSS Files
 
@@ -98,20 +103,9 @@ bootstrap/
 │   ├── bootstrap.rtl.css.map
 │   ├── bootstrap.rtl.min.css
 │   └── bootstrap.rtl.min.css.map
-└── js/
-    ├── bootstrap.bundle.js
-    ├── bootstrap.bundle.js.map
-    ├── bootstrap.bundle.min.js
-    ├── bootstrap.bundle.min.js.map
-    ├── bootstrap.esm.js
-    ├── bootstrap.esm.js.map
-    ├── bootstrap.esm.min.js
-    ├── bootstrap.esm.min.js.map
-    ├── bootstrap.js
-    ├── bootstrap.js.map
-    ├── bootstrap.min.js
-    └── bootstrap.min.js.map
+
 ```
+see https://getbootstrap.com/docs/5.0/getting-started/contents/
 
 # Version naming
 Its major version is the same as Bootstrap's major version it includes.
