@@ -4,8 +4,7 @@
     <language-name>xul/html</language-name>
 
     <version>
-        <version-class>org.zkoss.lab.bootstrap.Version</version-class>
-        <zk-version>9.0.0</zk-version><!-- or later -->
+        <version-class>org.zkoss.zkforge.bootstrap.Version</version-class>
+        <version-uid>5.1.0</version-uid>
     </version>
-    <stylesheet href="/webjars/bootstrap/5.1.0/css/bootstrap.min.css" type="text/css"/>
 </language-addon>
