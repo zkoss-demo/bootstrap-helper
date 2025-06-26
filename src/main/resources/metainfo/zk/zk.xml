@@ -1,0 +1,7 @@
+<zk>
+    <config-name>bootstrap</config-name>
+    <depends>zul</depends>
+    <desktop-config>
+        <theme-uri-handler-class>org.zkoss.zkforge.bootstrap.BootstrapThemeUriHandler</theme-uri-handler-class>
+    </desktop-config>
+</zk>
