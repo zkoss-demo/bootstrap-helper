@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.zkoss.zkforge</groupId>
     <artifactId>bootstrap-helper</artifactId>
-    <version>5.1.0</version>
+    <version>4.6.2</version>
     <properties>
         <zk.version>9.6.0</zk.version>
         <maven.compiler.source>1.9</maven.compiler.source>
@@ -26,7 +26,7 @@
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>bootstrap</artifactId>
-            <version>5.1.0</version>
+            <version>4.6.2</version>
         </dependency>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>

@@ -11,7 +11,7 @@ public class BootstrapThemeUriHandler implements ThemeURIHandler {
     // Key to determine which theme option to use: "default", "custom", "none"
     public static final String THEME_OPTION_KEY = BootstrapThemeUriHandler.class.getPackage().getName() ;
     public static final String CUSTOM_CSS_KEY = BootstrapThemeUriHandler.class.getPackage().getName() + ".custom";
-    public static final String BASE_URI = "/webjars/bootstrap/5.1.0/css/";
+    public static final String BASE_URI = "/webjars/bootstrap/" + Version.UID + "/css/";
     public enum Option { defaultStyle, custom, none }
 
     private static final Logger logger = LoggerFactory.getLogger(BootstrapThemeUriHandler.class);
@@ -44,7 +44,6 @@ public class BootstrapThemeUriHandler implements ThemeURIHandler {
             case defaultStyle:
             default:
                 modifier.add(BASE_URI + produceCssFile("grid"));
-                modifier.add(BASE_URI + produceCssFile("utilities"));
                 // because bootstrap-reboot.css affects ZK styles, we do not add it by default
         }
     }

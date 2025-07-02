@@ -3,8 +3,8 @@
 Simplify the way to include [Bootstrap](https://getbootstrap.com/) CSS on all ZK pages (application scope).
 
 Bootstrap is a good companion for ZK with the following usages:
-* Layout a page with [the responsive grid system](https://getbootstrap.com/docs/5.0/layout/grid/)
-* Style a page with [utility CSS classes](https://getbootstrap.com/docs/5.0/utilities/background/)
+* Layout a page with [the responsive grid system](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+* Style a page with [utility CSS classes](https://getbootstrap.com/docs/4.6/utilities/borders/)
 
 This addon include Bootstrap [WebJar](https://www.webjars.org/) and its CSS files for you.
 
@@ -24,7 +24,6 @@ Then that's all done if you just need the default usage.
 
 By default, the helper includes the following Bootstrap CSS files automatically on all ZK pages:
 * `bootstrap-grid.min.css`: the responsive grid system
-* `bootstrap-utilities.min.css` : utility CSS classes
 
 You don't need to specify anything in `zk.xml` for this default behavior.
 
@@ -43,13 +42,12 @@ To include only specific Bootstrap CSS files, set the option to `custom` and spe
     <name>org.zkoss.zkforge.bootstrap.custom</name>
     <list>
         <value>grid</value>
-        <value>utilities</value>
-        <!-- or "reboot" -->
+        <value>reboot</value>
     </list>
 </library-property>
 ```
 
-Supported values: `grid`, `utilities`, `reboot`.
+Supported values: see [Bootstrap CSS Files](#bootstrap-css-files) section below.
 
 ## Disable Bootstrap CSS
 
@@ -68,41 +66,28 @@ Check the following css file names to know the allowed custom values, it's the w
 # Bootstrap CSS Files
 
 ```text
-bootstrap/
-├── css/
-│   ├── bootstrap-grid.css
-│   ├── bootstrap-grid.css.map
-│   ├── bootstrap-grid.min.css
-│   ├── bootstrap-grid.min.css.map
-│   ├── bootstrap-grid.rtl.css
-│   ├── bootstrap-grid.rtl.css.map
-│   ├── bootstrap-grid.rtl.min.css
-│   ├── bootstrap-grid.rtl.min.css.map
-│   ├── bootstrap-reboot.css
-│   ├── bootstrap-reboot.css.map
-│   ├── bootstrap-reboot.min.css
-│   ├── bootstrap-reboot.min.css.map
-│   ├── bootstrap-reboot.rtl.css
-│   ├── bootstrap-reboot.rtl.css.map
-│   ├── bootstrap-reboot.rtl.min.css
-│   ├── bootstrap-reboot.rtl.min.css.map
-│   ├── bootstrap-utilities.css
-│   ├── bootstrap-utilities.css.map
-│   ├── bootstrap-utilities.min.css
-│   ├── bootstrap-utilities.min.css.map
-│   ├── bootstrap-utilities.rtl.css
-│   ├── bootstrap-utilities.rtl.css.map
-│   ├── bootstrap-utilities.rtl.min.css
-│   ├── bootstrap-utilities.rtl.min.css.map
-│   ├── bootstrap.css
-│   ├── bootstrap.css.map
-│   ├── bootstrap.min.css
-│   ├── bootstrap.min.css.map
-│   ├── bootstrap.rtl.css
-│   ├── bootstrap.rtl.css.map
-│   ├── bootstrap.rtl.min.css
-│   └── bootstrap.rtl.min.css.map
-
+bootstrap/css/
+bootstrap.css
+bootstrap.css.gz
+bootstrap.min.css.gz
+bootstrap.min-jsf.css
+bootstrap.min-jsf.css.gz
+bootstrap-grid.css
+bootstrap-grid.css.gz
+bootstrap-grid.min.css.gz
+bootstrap-grid.min-jsf.css
+bootstrap-grid.min-jsf.css.gz
+bootstrap-grid-jsf.css
+bootstrap-grid-jsf.css.gz
+bootstrap-jsf.css
+bootstrap-jsf.css.gz
+bootstrap-reboot.css
+bootstrap-reboot.css.gz
+bootstrap-reboot.min.css.gz
+bootstrap-reboot.min-jsf.css
+bootstrap-reboot.min-jsf.css.gz
+bootstrap-reboot-jsf.css
+bootstrap-reboot-jsf.css.gz
 ```
 see https://getbootstrap.com/docs/5.0/getting-started/contents/
 
@@ -112,7 +97,7 @@ Its major version is the same as Bootstrap's major version it includes.
 | ZK Bootstrap Helper | Bootstrap |
 |---------------------|-----------|
 | 5.x                 | 5.x       |
-
+| 4.x                 | 4.x       |
 
 # Testing
 run `jetty:run`
