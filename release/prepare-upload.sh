@@ -13,3 +13,4 @@ rm -rf $UPLOAD_FOLDER
 
 mkdir -p $TARGET_FOLDER/$EVAL_FOLDER
 cp target/$ARTIFACT_ID-$VERSION-bundle.jar $TARGET_FOLDER
+echo "Files prepared for upload in $TARGET_FOLDER"
