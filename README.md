@@ -120,5 +120,7 @@ visit http://localhost:8080/bootstrap-helper/ to see a demo page.
 inspect the page source to see which CSS files are included.
 
 # Release
-1. change the version in `pom.xml`
-2. run `release.sh`
+1. change the version in `pom.xml` with [upVer](release/upVer)
+2. run [release](release/release) 
+3. upload to file server
+4. publish to Maven CE repository with [PBFUM](http://jenkins2/view/All/job/PBFUM/)

@@ -12,6 +12,10 @@
         <maven.compiler.target>1.9</maven.compiler.target>
         <maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
     </properties>
+    <description>
+        This project is a ZK addon based on ZK CE that simplifies the way to include Bootstrap(https://getbootstrap.com/) CSS on all ZK pages (application scope).
+    </description>
+    <url>http://www.zkoss.org</url>
     <dependencies>
         <dependency>
             <groupId>org.zkoss.zk</groupId>
