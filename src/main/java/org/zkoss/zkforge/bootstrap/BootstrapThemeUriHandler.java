@@ -16,6 +16,10 @@ public class BootstrapThemeUriHandler implements ThemeURIHandler {
 
     private static final Logger logger = LoggerFactory.getLogger(BootstrapThemeUriHandler.class);
 
+    /**
+     * With any Servlet 3 compatible container, the WebJars that are in the WEB-INF/lib directory are automatically made available as static resources. This works because anything in a META-INF/resources directory in a JAR in WEB-INF/lib is automatically exposed as a static resource. Please note that in case of Tomcat the JarScanner should not be configured to skip the WebJars (e.g. when jarsToSkip is set to * add the WebJars to jarsToScan).
+     * https://www.webjars.org/documentation#servlet3
+     */
     @Override
     public void modifyThemeURIs(Execution exec, ThemeURIModifier modifier) {
         if (!isServlet3OrAbove()){

@@ -1,18 +1,34 @@
 # ZK Bootstrap Helper
 
-simplify the way to include Bootstrap CSS on all ZK pages.
+Simplify the way to include [Bootstrap](https://getbootstrap.com/) CSS on all ZK pages (application scope).
+
+Bootstrap is a good companion for ZK with the following usages:
+* Layout a page with [the responsive grid system](https://getbootstrap.com/docs/5.0/layout/grid/)
+* Style a page with [utility CSS classes](https://getbootstrap.com/docs/5.0/utilities/background/)
+
+This addon include Bootstrap [WebJar](https://www.webjars.org/) and its CSS files for you.
 
 # Usage
+Include the dependency in your `pom.xml`:
 
-Add the following to your `WEB-INF/zk.xml` to control which Bootstrap CSS files are included:
+```xml
+<dependency>
+    <groupId>org.zkoss.zkforge</groupId>
+    <artifactId>bootstrap-helper</artifactId>
+    <version>${bootstrap-helper.version}</version>
+</dependency>
+```
+Then that's all done if you just need the default usage.
 
 ## Default (Grid + Utilities)
 
-By default, the helper includes: 
-* `bootstrap-grid.min.css` 
-* `bootstrap-utilities.min.css`
+By default, the helper includes the following Bootstrap CSS files automatically on all ZK pages:
+* `bootstrap-grid.min.css`: the responsive grid system
+* `bootstrap-utilities.min.css` : utility CSS classes
 
 You don't need to specify anything in `zk.xml` for this default behavior.
+
+(Note: we don't include bootstrap-reboot.css by default because it affects ZK default styles.)
 
 ## Custom CSS Selection
 
@@ -46,24 +62,7 @@ To disable all automatic Bootstrap CSS inclusion:
 </library-property>
 ```
 
-# Example
-
-```xml
-<library-property>
-    <name>org.zkoss.zkforge.bootstrap</name>
-    <value>custom</value>
-</library-property>
-<library-property>
-    <name>org.zkoss.zkforge.bootstrap.custom</name>
-    <list>
-        <value>grid</value>
-    </list>
-</library-property>
-```
-
-This will only include `bootstrap-grid.min.css`.
-
-## Custom Values
+## Supported Custom Values
 Check the following css file names to know the allowed custom values, it's the word between `bootstrap-` and `min.css`. (e.g. `grid` for `bootstrap-grid.min.css`).
 
 # Bootstrap CSS Files
@@ -113,3 +112,13 @@ Its major version is the same as Bootstrap's major version it includes.
 | ZK Bootstrap Helper | Bootstrap |
 |---------------------|-----------|
 | 5.x                 | 5.x       |
+
+
+# Testing
+run `jetty:run`
+visit http://localhost:8080/bootstrap-helper/ to see a demo page.
+inspect the page source to see which CSS files are included.
+
+# Release
+1. change the version in `pom.xml`
+2. run `release.sh`
