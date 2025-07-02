@@ -7,7 +7,8 @@ set -e
 UPLOAD_FOLDER=target/to_upload
 MVN_FOLDER=$VERSION/maven
 
-TARGET_FOLDER=$UPLOAD_FOLDER/$ARTIFACT_ID/$MVN_FOLDER
+# follow file server /potix/rd folder structure, so we can directly upload
+TARGET_FOLDER=$UPLOAD_FOLDER/$ARTIFACT_ID/releases/$MVN_FOLDER
 
 rm -rf $UPLOAD_FOLDER
 
